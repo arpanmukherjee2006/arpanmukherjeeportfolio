@@ -6,7 +6,6 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
-import CustomCursor from './components/CustomCursor'
 import { initScrollReveal } from './utils/scrollReveal'
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-dark-bg">
-      <CustomCursor />
       <Navbar />
       <main className="max-w-6xl mx-auto px-6 py-8">
         <Hero />
