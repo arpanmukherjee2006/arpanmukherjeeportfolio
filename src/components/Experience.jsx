@@ -31,38 +31,38 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-20">
-      <h2 className="text-3xl mb-8 text-text-primary font-mono">
+    <section id="experience" className="py-12 sm:py-16 md:py-20">
+      <h2 className="text-2xl sm:text-3xl mb-6 sm:mb-8 text-text-primary font-mono">
         Experience
       </h2>
       
-      <div className="space-y-12">
+      <div className="space-y-8 sm:space-y-12">
         {experiences.map((exp, idx) => (
           <div key={idx}>
-            <h3 className="text-xl text-text-primary font-mono mb-1">
+            <h3 className="text-lg sm:text-xl text-text-primary font-mono mb-1">
               {exp.role}
             </h3>
-            <p className="text-text-secondary text-sm font-mono mb-1">
+            <p className="text-text-secondary text-xs sm:text-sm font-mono mb-1">
               {exp.company}
             </p>
-            <p className="text-text-secondary text-xs font-mono mb-4">
+            <p className="text-text-secondary text-xs font-mono mb-3 sm:mb-4">
               {exp.period}
             </p>
-            <p className="text-text-secondary text-sm leading-relaxed font-mono max-w-4xl">
+            <p className="text-text-secondary text-xs sm:text-sm leading-relaxed font-mono max-w-4xl">
               {exp.description}
             </p>
           </div>
         ))}
 
         <div>
-          <h3 className="text-xl text-text-primary font-mono mb-6">
+          <h3 className="text-lg sm:text-xl text-text-primary font-mono mb-4 sm:mb-6">
             Freelance Work
           </h3>
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {freelanceWork.map((work, idx) => (
               <div key={idx}>
-                <div className="flex items-baseline gap-2 mb-1">
-                  <h4 className="text-lg text-text-primary font-mono">
+                <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2 mb-1">
+                  <h4 className="text-base sm:text-lg text-text-primary font-mono">
                     {work.title}
                   </h4>
                   {work.location && (
@@ -71,14 +71,14 @@ export default function Experience() {
                     </span>
                   )}
                 </div>
-                <p className="text-text-secondary text-sm leading-relaxed font-mono mb-2 max-w-4xl">
+                <p className="text-text-secondary text-xs sm:text-sm leading-relaxed font-mono mb-2 max-w-4xl">
                   {work.description}
                 </p>
                 <a 
                   href={work.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-text-primary text-sm font-mono hover:underline inline-flex items-center gap-1"
+                  className="text-text-primary text-xs sm:text-sm font-mono hover:underline inline-flex items-center gap-1 break-all"
                 >
                   {work.link} <span>↗</span>
                 </a>

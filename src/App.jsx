@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="min-h-screen bg-dark-bg">
       <Navbar />
-      <main className="max-w-6xl mx-auto px-6 py-8">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
         <Hero />
         <About />
         <Skills />
@@ -24,9 +24,9 @@ function App() {
         <Experience />
         <Contact />
       </main>
-      <footer className="border-t border-dark-border py-6">
-        <div className="max-w-6xl mx-auto px-6">
-          <p className="text-text-secondary text-sm font-mono text-center">
+      <footer className="border-t border-dark-border py-4 sm:py-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <p className="text-text-secondary text-xs sm:text-sm font-mono text-center">
             © 2026 Arpan Mukherjee
           </p>
         </div>

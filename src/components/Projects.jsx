@@ -19,44 +19,44 @@ export default function Projects() {
   ]
 
   return (
-    <section id="projects" className="py-20">
-      <h2 className="text-3xl mb-12 text-text-primary font-mono">
+    <section id="projects" className="py-12 sm:py-16 md:py-20">
+      <h2 className="text-2xl sm:text-3xl mb-8 sm:mb-12 text-text-primary font-mono">
         Projects
       </h2>
-      <div className="space-y-16">
+      <div className="space-y-8 sm:space-y-12 md:space-y-16">
         {projects.map((project, idx) => (
           <div 
             key={project.title} 
-            className="group bg-dark-card/30 border border-dark-border rounded-lg p-8 hover:border-text-primary/50 transition-all duration-500 hover-lift scroll-reveal"
+            className="group bg-dark-card/30 border border-dark-border rounded-lg p-4 sm:p-6 md:p-8 hover:border-text-primary/50 transition-all duration-500 hover-lift scroll-reveal"
             style={{ transitionDelay: `${idx * 0.1}s` }}
           >
-            <div className="mb-4">
-              <h3 className="text-2xl text-text-primary font-mono mb-3 group-hover:gradient-text transition-all">
+            <div className="mb-3 sm:mb-4">
+              <h3 className="text-lg sm:text-xl md:text-2xl text-text-primary font-mono mb-2 sm:mb-3 group-hover:gradient-text transition-all">
                 {project.title}
               </h3>
               <a 
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-primary text-sm font-mono hover:underline inline-flex items-center gap-2 group/link"
+                className="text-text-primary text-xs sm:text-sm font-mono hover:underline inline-flex items-center gap-1 sm:gap-2 group/link break-all"
               >
                 <span className="group-hover/link:translate-x-1 transition-transform">{project.link}</span>
                 <span className="group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform">↗</span>
               </a>
             </div>
-            <div className="space-y-4 max-w-4xl">
-              <p className="text-text-secondary text-sm leading-relaxed font-mono">
+            <div className="space-y-3 sm:space-y-4 max-w-4xl">
+              <p className="text-text-secondary text-xs sm:text-sm leading-relaxed font-mono">
                 {project.description}
               </p>
-              <p className="text-text-secondary text-sm leading-relaxed font-mono">
+              <p className="text-text-secondary text-xs sm:text-sm leading-relaxed font-mono">
                 {project.details}
               </p>
             </div>
-            <div className="flex flex-wrap gap-2 mt-6">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="bg-dark-bg border border-dark-border px-3 py-1 rounded text-xs text-text-secondary font-mono hover:border-text-primary/50 transition-colors"
+                  className="bg-dark-bg border border-dark-border px-2 sm:px-3 py-1 rounded text-xs text-text-secondary font-mono hover:border-text-primary/50 transition-colors"
                 >
                   {tag}
                 </span>
