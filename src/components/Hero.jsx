@@ -1,15 +1,8 @@
-import { useState } from 'react'
-
 export default function Hero() {
-  const [copied, setCopied] = useState(false)
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText('npx arpan-dev')
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    } catch (err) {
-      console.error('Failed to copy:', err)
+  const scrollToExperience = () => {
+    const experienceSection = document.getElementById('experience')
+    if (experienceSection) {
+      experienceSection.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
@@ -34,25 +27,12 @@ export default function Hero() {
         <p className="text-text-secondary text-lg md:text-xl max-w-2xl leading-relaxed font-mono animate-fade-in-delay">
           I BUILD WEBSITES, DIGITAL PRODUCTS & GROW THEM WITH PERFORMANCE MARKETING
         </p>
-        <div className="flex items-center gap-4 mt-8 animate-fade-in-delay-2">
-          <div className="relative inline-block">
-            <button 
-              onClick={handleCopy}
-              className="bg-dark-card border border-dark-border px-6 py-3 rounded-lg font-mono text-sm hover:border-text-primary hover:shadow-lg hover:shadow-text-primary/20 transition-all duration-300 group"
-            >
-              <span className="group-hover:animate-pulse">&gt;</span> npx arpan-dev
-            </button>
-            
-            {/* Copy notification */}
-            {copied && (
-              <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-text-primary text-dark-bg px-4 py-2 rounded font-mono text-xs whitespace-nowrap animate-fade-in">
-                ✓ Copied to clipboard!
-              </div>
-            )}
-          </div>
-          
-          <span className="text-text-secondary text-sm font-mono">← Copy & paste in terminal</span>
-        </div>
+        <button 
+          onClick={scrollToExperience}
+          className="mt-8 bg-dark-card border border-dark-border px-6 py-3 rounded-lg font-mono text-sm hover:border-text-primary hover:shadow-lg hover:shadow-text-primary/20 transition-all duration-300 animate-fade-in-delay-2 group"
+        >
+          View My Works →
+        </button>
       </div>
       
       {/* Decorative elements */}
