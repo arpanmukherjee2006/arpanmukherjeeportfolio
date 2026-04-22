@@ -1,11 +1,4 @@
 export default function Hero() {
-  const scrollToExperience = () => {
-    const experienceSection = document.getElementById('experience')
-    if (experienceSection) {
-      experienceSection.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden px-4 sm:px-6">
       {/* Animated background gradient */}
@@ -27,12 +20,16 @@ export default function Hero() {
         <p className="text-text-secondary text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl leading-relaxed font-mono animate-fade-in-delay">
           I BUILD WEBSITES, DIGITAL PRODUCTS & GROW THEM WITH PERFORMANCE MARKETING
         </p>
-        <button 
-          onClick={scrollToExperience}
-          className="mt-4 sm:mt-8 bg-dark-card border border-dark-border px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-mono text-xs sm:text-sm hover:border-text-primary hover:shadow-lg hover:shadow-text-primary/20 transition-all duration-300 animate-fade-in-delay-2 group"
+        <a 
+          href="/Arpan_Mukherjee_Resume.pdf"
+          download="Arpan_Mukherjee_Resume.pdf"
+          className="inline-flex items-center gap-2 mt-4 sm:mt-8 bg-dark-card border border-dark-border px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-mono text-xs sm:text-sm hover:border-text-primary hover:shadow-lg hover:shadow-text-primary/20 transition-all duration-300 animate-fade-in-delay-2 group"
         >
-          View My Works →
-        </button>
+          <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Download Resume
+        </a>
       </div>
       
       {/* Decorative elements - hidden on mobile */}
